@@ -28,7 +28,7 @@ public class ViewGroup extends View {
             for (View v : children) {
                 if (dispatchTransformedTouchEvent(event, v)) {
                     //命中多个时，用next节点以链表存储
-                    //child节点表示子节点表示子view的层级关系，next节点表示同时命中多个view时链表存储集合-
+                    //child节点表示子view的层级关系，next节点表示同时命中多个view时的链表存储集合
                     mFirstTouchTarget = new TouchTarget();
                     mFirstTouchTarget.child = v;
                     hasDispatch = true;
